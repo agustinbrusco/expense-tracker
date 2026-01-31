@@ -113,10 +113,10 @@ class GoogleSheetsHandler:
         """Get recent entries from the spreadsheet
         
         Args:
-            limit (int): Number of recent entries to retrieve
+            limit (int): Number of recent entries to retrieve. Default is 10.
             
         Returns:
-            pd.DataFrame: DataFrame containing recent entries
+            pd.DataFrame: DataFrame containing recent entries, or None if no entries exist
         """
         # Get all values
         all_values = self.sheet.get_all_values()
@@ -138,7 +138,7 @@ class GoogleSheetsHandler:
         """Get all entries from the spreadsheet
         
         Returns:
-            pd.DataFrame: DataFrame containing all entries
+            pd.DataFrame: DataFrame containing all entries, or None if no entries exist
         """
         all_values = self.sheet.get_all_values()
         

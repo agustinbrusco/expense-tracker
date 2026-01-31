@@ -121,7 +121,7 @@ def main():
     
     try:
         recent_entries = sheets.get_recent_entries(limit=10)
-        if recent_entries:
+        if recent_entries is not None:
             st.dataframe(
                 recent_entries,
                 use_container_width=True,
